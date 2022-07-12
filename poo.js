@@ -1,66 +1,48 @@
-class animal {
-    constructor(nom,couleur, sante = 100){
+class Animal {
+    constructor(nom, couleur, sante = 100) {
         this.nom = nom;
         this.couleur = couleur;
         this.sante = sante;
     }
 
-    dormir(){
+    dormir() {
         console.log("L'animal" + this.nom + "dort.");
     }
 
-    manger(){
+    manger() {
         console.log("L'animal" + this.nom + "mange.");
     }
 
-    attaquer(){
+    attaquer() {
         console.log("L'animal" + this.nom + "attaque.");
     }
 
-    seDeplacer(){
+    seDeplacer() {
         console.log("L'animal" + this.nom + "se déplace.");
     }
 
-    communiquer(){
+    communiquer() {
         console.log("L'animal" + this.nom + "communique..");
     }
 }
 
-class oiseau extends Animal {
-    constructor(nom,couleur, sante, longueurDesAiles){
-    super(nom, couleur, sante);
+class Oiseau extends Animal {
+    constructor(nom, couleur, sante, longueurDesAiles) {
+        super(nom, couleur, sante);
+
+        this.longueurDesAiles = longueurDesAiles;
+
+    }
+
+    voler(){
+        super.seDeplacer();
+        console.log("L'oiseau" + this.nom + "vole.");
+    }
     
-    this.longueurDesAiles = longueurDesAiles;
+    chanter(){
+        super.communiquer();
+        console.log("L'oiseau" + this.nom + "chante.");
+    }
+    
+
 }
-
-Voler(){
-    super.seDeplacer();
-    console.log("L'animal" + this.nom + "vole.");
-}
-
-Chanter(){
-    super.communiquer();
-    console.log("L'oiseau" + this.nom + "chante.");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
